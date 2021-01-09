@@ -1,6 +1,6 @@
-# ThiaoNaiDee
+# flutter_maps
 
-A new Flutter project.
+A new Flutter application.
 
 ## Getting Started
 

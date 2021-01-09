@@ -16,9 +16,6 @@ class RegisterPage extends StatefulWidget {
 class _RegisterState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController name1Controller = TextEditingController();
-  final TextEditingController name2Controller = TextEditingController();
-  final TextEditingController phoneController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +49,6 @@ class _RegisterState extends State<RegisterPage> {
               child: TextField(
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(labelText: 'ชื่อ'),
-                controller: name1Controller,
               ),
             ),
             Padding(
@@ -60,7 +56,6 @@ class _RegisterState extends State<RegisterPage> {
               child: TextField(
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(labelText: 'นามสกุล'),
-                controller: name2Controller,
               ),
             ),
             Padding(
@@ -68,7 +63,6 @@ class _RegisterState extends State<RegisterPage> {
               child: TextField(
                 textAlign: TextAlign.center,
                 decoration: InputDecoration(labelText: 'เบอร์โทรศัพท์'),
-                controller: phoneController,
               ),
             ),
             Padding(
@@ -83,12 +77,6 @@ class _RegisterState extends State<RegisterPage> {
                             email: emailController.text.trim(),
                             password: passwordController.text.trim(),
                           );
-                      context.read<Authentication>().addData(
-                        email : emailController.text.trim(),
-                        name1: name1Controller.text.trim(),
-                        name2: name2Controller.text.trim(),
-                        phone1: phoneController.text.trim(),
-                      );
                       Navigator.pushNamed(context, '/aut-page');
                     },
                   )

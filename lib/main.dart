@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
           '/faverite-page': (context) => FaveritePage(),
           '/login-page': (context) => LoginPage(),
           '/fast-page': (context) => FastPage(),
-          '/map-page': (context) => MapPage(),
+          '/map-page': (context) => MyMap(),
           '/aut-page': (context) => AuthenticationWrapper(),
         },
       ),
